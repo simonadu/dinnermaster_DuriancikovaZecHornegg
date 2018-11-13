@@ -5,12 +5,13 @@ var users = {
     },
 
     getuserByuser_id: function(id, callback) {
-        return db.query('select * from users where id=?', [id], callback);
+        return db.query('select * from user where id=?', [id], callback);
     },
-    adduser: function(users, callback) {
+    adduser: function(user, callback) {
         return db.query(
-            'insert into users values(?,?,?,?,?,?,?,?,?)',
-            [users.username, users.firstname, users.lastname, users.phone, users.score, users.mail, users.no_guests, users.nationality, users.diet],
+            'insert into user values(?,?,?,?,?,?,?,?,?,?,?)',
+            [ user.id, user.username, user.firstname,user.password, user.lastname, user.phone, user.score, user.mail,
+                user.no_guests, user.nationality, user.diet],
             callback
         );
     },
