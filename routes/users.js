@@ -32,4 +32,24 @@ router.post('/', function(req, res, next) {
     });
 });
 
+router.delete('/:id', function(req, res, next) {
+    users.deleteuser(req.params.id, function(err, count) {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json(count);
+        }
+    });
+});
+
+router.put('/:id', function(req, res, next) {
+    users.updateuser(req.params.id, req.body, function(err, rows) {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json(rows);
+        }
+    });
+});
+
 module.exports = router;
