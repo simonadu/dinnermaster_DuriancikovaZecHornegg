@@ -1,17 +1,17 @@
 var db = require('../database');
 var dinners = {
     getAlldinners: function(callback) {
-        return db.query('select * from dinner', callback);
+        return db.query('select user.username, dinner.description, dinner.diet, dinner.date,  dinner.time,  dinner.address, dinner.no_plates, dinner.no_guests from dinner inner join user ON dinner.user_id=user.id ', callback)
     },
 
     getdinnerBydinner_id: function(id, callback) {
-        return db.query('select * from dinner where id=?', [id], callback);
+        return db.query('select user.username, dinner.description, dinner.diet, dinner.date,  dinner.time,  dinner.address, dinner.no_plates, dinner.no_guests from dinner inner join user ON dinner.user_id=user.id where dinner.id=? ', [id], callback)
     },
 
     adddinner: function(dinner, callback) {
         return db.query(
             'insert into dinner values(?,?,?,?,?,?,?,?,?)',
-            [ dinner.id, dinner.user_id, dinner.no_plates ,dinner.no_guests, dinner.diet,
+            [   dinner.id, dinner.user_id, dinner.no_plates ,dinner.no_guests, dinner.diet,
                 dinner.time, dinner.date, dinner.address, dinner.description],
             callback
         );

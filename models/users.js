@@ -7,10 +7,15 @@ var users = {
     getuserByuser_id: function(id, callback) {
         return db.query('select * from user where id=?', [id], callback);
     },
+
+    getdinnerByuser_id:function(id, callback) {
+        return db.query('select ')
+    },
+
     adduser: function(user, callback) {
         return db.query(
             'insert into user values(?,?,?,?,?,?,?,?,?,?,?)',
-            [ user.id, user.username, user.firstname,user.password, user.lastname,
+            [ user.id, user.username, user.password,  user.firstname, user.lastname,
                 user.phone, user.score, user.mail,
                 user.no_guests, user.nationality, user.diet],
             callback
