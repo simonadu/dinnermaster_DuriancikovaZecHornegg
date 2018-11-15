@@ -12,10 +12,10 @@ var users = {
         return db.query('select ')
     },
 
-    adduser: function(user, callback) {
+    adduser: function(user, password, callback) {
         return db.query(
             'insert into user values(?,?,?,?,?,?,?,?,?,?,?)',
-            [ user.id, user.username, user.password,  user.firstname, user.lastname,
+            [ user.id, user.username, password, user.firstname, user.lastname,
                 user.phone, user.score, user.mail,
                 user.no_guests, user.nationality, user.diet],
             callback

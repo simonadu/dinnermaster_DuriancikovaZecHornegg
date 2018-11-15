@@ -2,6 +2,9 @@ var express = require('express');
 var router = express.Router();
 var users = require('../models/users');
 
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+
 router.get('/:id?', function(req, res, next) {
     if (req.params.id) {
         users.getuserByuser_id(req.params.id, function(err, rows) {
@@ -23,12 +26,17 @@ router.get('/:id?', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-    users.adduser(req.body, function(err, count) {
-        if (err) {
-            res.json(err);
-        } else {
-            res.json(req.body); //or return count for 1 & 0
-        }
+
+    const password = req.body.password;
+    
+    bcrypt.hash(password, saltRounds, function(err, hash) {
+        users.adduser(req.body, hash, function(err, count) {
+            if (err) {
+                res.json(err);
+            } else {
+                res.json(req.body); //or return count for 1 & 0
+            }
+        });
     });
 });
 
