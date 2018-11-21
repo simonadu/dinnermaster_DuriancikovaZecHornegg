@@ -9,6 +9,10 @@ var users = require('./routes/users');
 var dinners= require('./routes/dinners');
 var app = express();
 
+//Authentication packages
+var session = require('express-session');
+var passport = require('passport');
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -22,6 +26,18 @@ app.use(
 );
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+//Authentication app.use
+app.use(session({
+    secret: 'akjefmsdryosdlkf',
+    resave: false,
+    saveUninitialized: false,
+    //cookie: { secure: true }
+  }))
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use('/', routes);
 app.use('/users', users);
 app.use('/dinners', dinners);

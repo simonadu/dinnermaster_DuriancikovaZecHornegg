@@ -7,7 +7,7 @@ const saltRounds = 10;
 
 router.get('/:id?', function(req, res, next) {
     if (req.params.id) {
-        users.getuserByuser_id(req.params.id, function(err, rows) {
+        users.getUserByUser_id(req.params.id, function(err, rows) {
             if (err) {
                 res.json(err);
             } else {
@@ -15,7 +15,7 @@ router.get('/:id?', function(req, res, next) {
             }
         });
     } else {
-        users.getAllusers(function(err, rows) {
+        users.getAllUsers(function(err, rows) {
             if (err) {
                 res.json(err);
             } else {
@@ -30,7 +30,7 @@ router.post('/', function(req, res, next) {
     const password = req.body.password;
     
     bcrypt.hash(password, saltRounds, function(err, hash) {
-        users.adduser(req.body, hash, function(err, count) {
+        users.addUser(req.body, hash, function(err, count) {
             if (err) {
                 res.json(err);
             } else {
@@ -41,7 +41,7 @@ router.post('/', function(req, res, next) {
 });
 
 router.delete('/:id', function(req, res, next) {
-    users.deleteuser(req.params.id, function(err, count) {
+    users.deleteUser(req.params.id, function(err, count) {
         if (err) {
             res.json(err);
         } else {
@@ -51,7 +51,7 @@ router.delete('/:id', function(req, res, next) {
 });
 
 router.put('/:id', function(req, res, next) {
-    users.updateuser(req.params.id, req.body, function(err, rows) {
+    users.upsadeUser(req.params.id, req.body, function(err, rows) {
         if (err) {
             res.json(err);
         } else {
