@@ -8,10 +8,6 @@ var users = {
         return db.query('select * from user where id=?', [id], callback);
     },
 
-    getDinnerByUser_id: function(id, callback) {
-        return db.query('select ')
-    },
-
     addUser: function(user, password_hash, callback) {
         return db.query(
             'insert into user values(?,?,?,?,?,?,?,?,?,?,?)',
@@ -26,7 +22,7 @@ var users = {
         return db.query('delete from user where id=?', [id], callback);
     },
 
-    upsadeUser: function(id, user, callback) {
+    updateUser: function(id, user, callback) {
         return db.query(
             'update user set username=?, password=?, fisrtname=?, lastname=?, phone= ?, score=?, mail=?, no_guests=?, nationality=?, diet=? where id=?',
             [   user.username, user.password, user.firstname, user.lastname,

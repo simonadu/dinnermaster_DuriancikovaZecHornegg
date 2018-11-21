@@ -32,6 +32,16 @@ router.post('/', function(req, res, next) {
     });
 });
 
+router.get('/user/:id?', function(req, res, next) {
+    dinners.getdinnersByuser_id(req.params.id, function(err, count) {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json(count);
+        }
+    });
+});
+
 router.delete('/:id', function(req, res, next) {
     dinners.deletedinner(req.params.id, function(err, count) {
         if (err) {
@@ -44,6 +54,16 @@ router.delete('/:id', function(req, res, next) {
 
 router.put('/:id', function(req, res, next) {
     dinners.updatedinner(req.params.id, req.body, function(err, rows) {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json(rows);
+        }
+    });
+});
+
+router.put('/guests/:id', function (req,res,next) {
+    dinners.addGuest(req.params.id, req.body, function(err,rows) {
         if (err) {
             res.json(err);
         } else {
