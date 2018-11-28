@@ -1,8 +1,8 @@
 var mysql = require('mysql');
 var connection = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'project'
+  host: 'localhost',
+  user: 'root',
+  password: 'root',
+  database: 'dinnermaster'
 });
 module.exports = connection;
