@@ -7,6 +7,7 @@ var cors = require('cors');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var dinners= require('./routes/dinners');
+var guests= require('./routes/guests');
 var app = express();
 
 //Authentication packages
@@ -41,6 +42,7 @@ app.use(passport.session());
 app.use('/', routes);
 app.use('/users', users);
 app.use('/dinners', dinners);
+app.use('/guests', guests);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');

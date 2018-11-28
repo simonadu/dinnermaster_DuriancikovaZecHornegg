@@ -25,6 +25,16 @@ router.get('/:id?', function(req, res, next) {
     }
 });
 
+router.get('/show/:username?', function(req,res,next) {
+    users.getUserByUsername(req.params.username, function(err,count) {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json(count);
+        }
+    });
+});
+
 router.post('/', function(req, res, next) {
 
     const password = req.body.password;
@@ -52,6 +62,16 @@ router.delete('/:id', function(req, res, next) {
 
 router.put('/:id', function(req, res, next) {
     users.updateUser(req.params.id, req.body, function(err, rows) {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json(rows);
+        }
+    });
+});
+
+router.put('/guests/:id', function(req, res, next) {
+    users.updateUserGuests(req.params.id, req.body, function(err, rows) {
         if (err) {
             res.json(err);
         } else {

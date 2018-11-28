@@ -12,7 +12,7 @@ router.get('/:id?', function(req, res, next) {
             }
         });
     } else {
-        dinners.getAlldinners(function(err, rows) {
+        dinners.getUpToDateDinners(function(err, rows) {
             if (err) {
                 res.json(err);
             } else {
@@ -20,6 +20,16 @@ router.get('/:id?', function(req, res, next) {
             }
         });
     }
+});
+
+router.get ('/all', function (req, res, next){
+    dinners.getAlldinners(req.body, function(err, count) {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json(req.body);
+        }
+    });
 });
 
 router.post('/', function(req, res, next) {
