@@ -5,9 +5,12 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var routes = require('./routes/index');
+
 var users = require('./routes/users');
 var dinners = require('./routes/dinners');
+var guests = require('./routes/guests');
 var login = require('./routes/log-in');
+
 var app = express();
 
 //Authentication packages - session method - not being used
@@ -57,6 +60,7 @@ app.use(passport.session());
 app.use('/', routes);
 app.use('/users', users);
 app.use('/dinners', dinners);
+app.use('/guests', guests);
 app.use('/log-in', login);
 
 // catch 404 and forward to error handler
