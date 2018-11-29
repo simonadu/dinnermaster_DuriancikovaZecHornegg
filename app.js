@@ -10,13 +10,11 @@ var dinners = require('./routes/dinners');
 var login = require('./routes/log-in');
 var app = express();
 
-//Authentication packages - session method
+//Authentication packages - session method - not being used
 var session = require('express-session');
 var passport = require('passport');
 
 //Authentication packages - token method
-var bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
 const exjwt = require('express-jwt');
 
 /*========= Here we want to let the server know that we should expect and allow a header with the content-type of 'Authorization' ============*/
@@ -88,40 +86,6 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
-/*app.post('/log-in', (req, res) => {
-  const { username, password } = req.body;
-  console.log('User submitted: ', username, password);
-
-  users.getUserByUsername(username, null).then(user => {
-    console.log('User Found: ', user);
-    if (user === null) {
-      res.json(false);
-    }
-    bcrypt.compare(password, user.password, function(err, result) {
-      if (result === true) {
-        console.log('Valid!');
-        let token = jwt.sign(
-          { username: user.username },
-          'keyboard cat 4 ever',
-          { expiresIn: 129600 }
-        ); // Signing the token
-        res.json({
-          sucess: true,
-          err: null,
-          token
-        });
-      } else {
-        console.log('Entered Password and Hash do not match!');
-        res.status(401).json({
-          sucess: false,
-          token: null,
-          err: 'Entered Password and Hash do not match!'
-        });
-      }
-    });
-  });
-});*/
 
 app.get('/', jwtMW /* Using the express jwt MW here */, (req, res) => {
   console.log('Web Token Checked.');
