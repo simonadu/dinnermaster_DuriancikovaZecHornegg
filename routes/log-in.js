@@ -19,7 +19,18 @@ router.post('/', (req, res, next) => {
         if (result === true) {
           console.log('Valid!');
           let token = jwt.sign(
-            { username: rows.username },
+            {
+              id: rows[0].id,
+              username: rows[0].username,
+              fisrtname: rows[0].fisrtname,
+              lastname: rows[0].lastname,
+              phone: rows[0].phone,
+              score: rows[0].score,
+              mail: rows[0].mail,
+              no_guests: rows[0].no_guests,
+              nationality: rows[0].nationality,
+              diet: rows[0].diet
+            },
             'keyboard cat 4 ever',
             { expiresIn: 129600 }
           ); // Signing the token
