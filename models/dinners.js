@@ -1,15 +1,21 @@
 var db = require('../database');
 var dinners = {
-  getAllDinners: function(callback) {
-    return db.query(
-      'SELECT user.username, dinner.name, dinner.description, dinner.diet,  dinner.time,  dinner.date, dinner.address, dinner.no_plates, dinner.no_guests FROM dinner INNER JOIN user ON dinner.user_id=user.id ORDER BY date ',
-      callback
-    );
-  },
+//getAllDinners: function(callback) {
+  //  return db.query(
+    //  'SELECT user.username,dinner.id, dinner.name, dinner.description, dinner.diet,  dinner.time,  dinner.date, dinner.address, dinner.no_plates, dinner.no_guests FROM dinner INNER JOIN user ON dinner.user_id=user.id ORDER BY date ',
+      //callback
+//    );},
+
+    getUpToDateDinners: function(callback) {
+        return db.query(
+            'SELECT user.username,dinner.id, dinner.user_id, dinner.name, dinner.description, dinner.diet,  dinner.time, dinner.date, dinner.address, dinner.no_plates, dinner.no_guests FROM dinner INNER JOIN user ON dinner.user_id=user.id  WHERE (date= current_date AND time>=current_time) OR date> current_date ',
+            callback
+        );
+    },
 
   getDinnerByDinner_id: function(id, callback) {
     return db.query(
-      'SELECT user.username, dinner.name, dinner.description, dinner.diet,  dinner.time,  dinner.date, dinner.address, dinner.no_plates, dinner.no_guests FROM dinner INNER JOIN user ON dinner.user_id=user.id WHERE dinner.id=? ',
+      'SELECT user.username, dinner.id, dinner.user_id, dinner.name, dinner.description, dinner.diet,  dinner.time,  dinner.date, dinner.address, dinner.no_plates, dinner.no_guests FROM dinner INNER JOIN user ON dinner.user_id=user.id WHERE dinner.id=? ',
       [id],
       callback
     );
@@ -19,12 +25,6 @@ var dinners = {
     return db.query('SELECT * FROM dinner WHERE user_id=?', [id], callback);
   },
 
-  getUpToDateDinners: function(callback) {
-    return db.query(
-      'SELECT user.username, dinner.name, dinner.description, dinner.diet,  dinner.time, dinner.date, dinner.address, dinner.no_plates, dinner.no_guests FROM dinner INNER JOIN user ON dinner.user_id=user.id  WHERE (date= current_date AND time>=current_time) OR date> current_date ',
-      callback
-    );
-  },
 
   addDinner: function(dinner, callback) {
     return db.query(
