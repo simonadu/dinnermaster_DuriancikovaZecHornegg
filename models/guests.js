@@ -4,7 +4,7 @@ var guests = {
     //user can see who applied to the dinner
     getGuestsByDinner: function (id, callback) {
         return db.query
-        ('SELECT user.username, guest.id, guest.user_id, guest.dinner_id, guests.grade FROM guests INNER JOIN user ON guests.user_id=user.id WHERE dinner_id=?', [id], callback);
+        ('SELECT user.username, guests.id, guests.user_id, guests.dinner_id, guests.grade FROM guests INNER JOIN user ON guests.user_id=user.id WHERE dinner_id=?', [id], callback);
     },
 
     //user can see which dinners had he/she applied to
