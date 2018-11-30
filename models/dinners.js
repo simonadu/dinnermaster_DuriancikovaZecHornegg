@@ -21,6 +21,15 @@ var dinners = {
     );
   },
 
+    getUserByDinner_id: function(id, callback) {
+        return db.query(
+            'SELECT user_id FROM dinner WHERE id=? ',[id],
+            callback
+        );
+    },
+
+
+
   getDinnersByUser_id: function(id, callback) {
     return db.query('SELECT * FROM dinner WHERE user_id=?', [id], callback);
   },

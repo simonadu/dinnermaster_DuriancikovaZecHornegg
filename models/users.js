@@ -62,11 +62,8 @@ var users = {
 
   //increment users number of guests
   updateUserGuests: function(id, user, callback) {
-    return db.query(
-      'UPDATE user SET no_guests= no_guests+1 WHERE id=?',
-      [id],
-      callback
-    );
+      return db.query(
+          'UPDATE user SET no_guests = (no_guests+1) WHERE id=?', [id],  callback);
   }
 };
 module.exports = users;

@@ -22,6 +22,16 @@ router.get('/:id?', function(req, res, next) {
   }
 });
 
+router.get('/userid/:id', function(req, res, next) {
+    dinners.getUserByDinner_id(req.params.id, function(err, rows) {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json(rows);
+        }
+    });
+});
+
 router.get('/all', function(req, res, next) {
   dinners.getAllDinners(req.body, function(err, count) {
     if (err) {
