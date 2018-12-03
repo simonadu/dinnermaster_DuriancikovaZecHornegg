@@ -12,6 +12,8 @@ router.post('/', (req, res, next) => {
   users.getUserByUsername(username, function(err, rows) {
     if (err) {
       res.json(err);
+    } else if (rows[0] == undefined) {
+      res.json(false);
     } else {
       const password = req.body.password;
 
