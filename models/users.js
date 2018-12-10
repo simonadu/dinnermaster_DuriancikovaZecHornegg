@@ -1,7 +1,7 @@
 var db = require('../database');
 var users = {
   getAllUsers: function(callback) {
-    return db.query('SELECT * FROM USER', callback);
+    return db.query('SELECT * FROM USER ORDER BY score DESC', callback);
   },
 
   getUserByUser_id: function(id, callback) {
@@ -64,6 +64,7 @@ var users = {
   updateUserGuests: function(id, user, callback) {
       return db.query(
           'UPDATE user SET no_guests = (no_guests+1) WHERE id=?', [id],  callback);
-  }
+  },
+
 };
 module.exports = users;

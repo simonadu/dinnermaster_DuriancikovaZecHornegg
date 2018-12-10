@@ -70,6 +70,7 @@ router.put('/:id', function(req, res, next) {
     });
 });
 
+
 router.put('/guests/:id', function(req, res, next) {
     users.updateUserGuests(req.params.id, req.body, function(err, rows) {
         if (err) {

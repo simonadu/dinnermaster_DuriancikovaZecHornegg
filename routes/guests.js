@@ -13,8 +13,29 @@ router.get('/dinner/:id?', function(req, res, next) {
     });
 });
 
+router.get('/guest/:id?', function(req, res, next) {
+    guests.getGuestbyGuestId(req.params.id, function(err, count) {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json(count);
+        }
+    });
+});
+
 router.get('/visited/:id?', function(req,res,next){
     guests.getVisitedDinners(req.params.id, function(err,count) {
+        if(err) {
+            res.json(err);
+        } else {
+            res.json(count);
+        }
+    });
+});
+
+
+router.get('/alreadyvisited/:id?', function(req,res,next){
+    guests.getAlreadyVisitedDinners(req.params.id, function(err,count) {
         if(err) {
             res.json(err);
         } else {
