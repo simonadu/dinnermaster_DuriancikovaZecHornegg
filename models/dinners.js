@@ -1,10 +1,5 @@
 var db = require('../database');
 var dinners = {
-//getAllDinners: function(callback) {
-  //  return db.query(
-    //  'SELECT user.username,dinner.id, dinner.name, dinner.description, dinner.diet,  dinner.time,  dinner.date, dinner.address, dinner.no_plates, dinner.no_guests FROM dinner INNER JOIN user ON dinner.user_id=user.id ORDER BY date ',
-      //callback
-//    );},
 
     getUpToDateDinners: function(callback) {
         return db.query(
@@ -12,9 +7,6 @@ var dinners = {
             callback
         );
     },
-
-    // INSERT INTO movie (movie_id,title,overview,poster_path,original_language,vote_average,genres) SELECT * FROM (SELECT ?,?,?,?,?,?,?) AS tmp WHERE NOT EXISTS (SELECT title FROM movie WHERE title = ?) LIMIT 1;
-
 
   getDinnerByDinner_id: function(id, callback) {
     return db.query(
@@ -30,8 +22,6 @@ var dinners = {
             callback
         );
     },
-
-
 
   getDinnersByUser_id: function(id, callback) {
     return db.query('SELECT * FROM dinner WHERE user_id=?', [id], callback);

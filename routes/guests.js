@@ -34,16 +34,6 @@ router.get('/visited/:id?', function(req,res,next){
 });
 
 
-router.get('/alreadyvisited/:id?', function(req,res,next){
-    guests.getAlreadyVisitedDinners(req.params.id, function(err,count) {
-        if(err) {
-            res.json(err);
-        } else {
-            res.json(count);
-        }
-    });
-});
-
 router.post('/', function(req, res, next){
     guests.addGuest(req.body, function(err, count) {
         if (err) {
