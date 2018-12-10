@@ -23,16 +23,16 @@ router.get('/:id?', function(req, res, next) {
 });
 
 router.get('/userid/:id', function(req, res, next) {
-    dinners.getUserByDinner_id(req.params.id, function(err, rows) {
-        if (err) {
-            res.json(err);
-        } else {
-            res.json(rows);
-        }
-    });
+  dinners.getUserByDinner_id(req.params.id, function(err, rows) {
+    if (err) {
+      res.json(err);
+    } else {
+      res.json(rows);
+    }
+  });
 });
 
-router.get('/all', function(req, res, next) {
+/*router.get('/all', function(req, res, next) {
   dinners.getAllDinners(req.body, function(err, count) {
     if (err) {
       res.json(err);
@@ -40,7 +40,7 @@ router.get('/all', function(req, res, next) {
       res.json(req.body);
     }
   });
-});
+});*/
 
 router.post('/', function(req, res, next) {
   dinners.addDinner(req.body, function(err, count) {
