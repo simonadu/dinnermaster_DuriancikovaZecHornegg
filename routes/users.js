@@ -70,9 +70,28 @@ router.put('/:id', function(req, res, next) {
     });
 });
 
-
 router.put('/guests/:id', function(req, res, next) {
     users.updateUserGuests(req.params.id, req.body, function(err, rows) {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json(rows);
+        }
+    });
+});
+
+router.put('/rating/:id', function(req, res, next) {
+    users.userRating(req.params.id, req.body, function(err, rows) {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json(rows);
+        }
+    });
+});
+
+router.put('/decrement/:id', function(req, res, next) {
+    users.decrementGuest(req.params.id, req.body, function(err, rows) {
         if (err) {
             res.json(err);
         } else {

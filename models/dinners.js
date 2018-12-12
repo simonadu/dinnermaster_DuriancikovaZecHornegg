@@ -24,9 +24,8 @@ var dinners = {
     },
 
   getDinnersByUser_id: function(id, callback) {
-    return db.query('SELECT * FROM dinner WHERE user_id=?', [id], callback);
+    return db.query('SELECT * FROM dinner WHERE user_id=? ORDER BY dinner.date DESC', [id], callback);
   },
-
 
   addDinner: function(dinner, callback) {
     return db.query(
@@ -47,11 +46,33 @@ var dinners = {
     );
   },
 
-  deleteDinner: function(id, callback) {
-    return db.query('DELETE FROM dinner WHERE id=?', [id], callback);
+
+  addGuest: function(id, dinner, callback) {
+    return db.query(
+      'UPDATE dinner SET no_guests= CASE WHEN no_guests < no_plates THEN no_guests+1 ELSE no_plates END WHERE id=?',
+      [id],
+      callback
+    );
   },
 
-  updateDinner: function(id, dinner, callback) {
+  decrementGuest: function(id,dinner,callback) {
+      return db.query(
+          'UPDATE dinner SET no_guests= no_guests-1 WHERE id=?', [id], callback
+      );
+  },
+
+  dinnerRating: function(id, dinner, callback) {
+      return db.query(
+          'Update dinner SET grade=(SELECT SUM(grade) FROM guests WHERE guests.dinner_id= ?)where id=?',
+          [id, id],
+          callback
+      );
+  },
+};
+module.exports = dinners;
+
+/*
+ updateDinner: function(id, dinner, callback) {
     return db.query(
       'UPDATE dinner SET user_id=?, no_plates=?, no_guests=?, diet=?, time= ?, date=?, address=?, description=?, name=? WHERE id=?',
       [
@@ -70,12 +91,8 @@ var dinners = {
     );
   },
 
-  addGuest: function(id, dinner, callback) {
-    return db.query(
-      'UPDATE dinner SET no_guests= CASE WHEN no_guests < no_plates THEN no_guests+1 ELSE no_plates END WHERE id=?',
-      [id],
-      callback
-    );
-  }
-};
-module.exports = dinners;
+    deleteDinner: function(id, callback) {
+    return db.query('DELETE FROM dinner WHERE id=?', [id], callback);
+  },
+
+ */

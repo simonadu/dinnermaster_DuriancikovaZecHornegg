@@ -66,5 +66,19 @@ var users = {
           'UPDATE user SET no_guests = (no_guests+1) WHERE id=?', [id],  callback);
   },
 
+    userRating: function(id, dinner, callback) {
+        return db.query(
+            'UPDATE user SET score=(SELECT SUM(grade) FROM dinner WHERE dinner.user_id= ?)where id=?',
+            [id, id],
+            callback
+        );
+    },
+
+    decrementGuest: function(id,dinner,callback) {
+        return db.query(
+            'UPDATE user SET no_guests= no_guests-1 WHERE id=?', [id], callback
+        );
+    },
+
 };
 module.exports = users;

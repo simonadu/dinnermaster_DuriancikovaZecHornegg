@@ -33,6 +33,15 @@ router.get('/visited/:id?', function(req,res,next){
     });
 });
 
+router.get('/guestId/:dinner_id/:user_id', function(req,res,next){
+    guests.getGuestIdByDinnerAndUser(req.params.dinner_id,req.params.user_id, function(err,count) {
+        if(err) {
+            res.json(err);
+        } else {
+            res.json(count);
+        }
+    });
+});
 
 router.post('/', function(req, res, next){
     guests.addGuest(req.body, function(err, count) {
@@ -43,7 +52,6 @@ router.post('/', function(req, res, next){
         }
     });
 });
-
 
 router.delete('/:id', function(req, res, next) {
     guests.deleteGuest(req.params.id, function(err, count) {
@@ -64,6 +72,5 @@ router.put('/:id', function(req, res, next) {
         }
     });
 });
-
 
 module.exports = router;

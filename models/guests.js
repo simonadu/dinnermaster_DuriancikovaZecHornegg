@@ -14,7 +14,10 @@ var guests = {
         );
     },
 
-
+    getGuestIdByDinnerAndUser:function(dinner_id, user_id, callback) {
+        return db.query('SELECT guests.id FROM guests WHERE dinner_id=? AND user_id=?', [dinner_id, user_id], callback
+        );
+    },
 
     getGuestbyGuestId: function(id, callback) {
         return db.query
@@ -40,7 +43,6 @@ var guests = {
             callback
         );
     },
-
 
 };
 module.exports = guests;

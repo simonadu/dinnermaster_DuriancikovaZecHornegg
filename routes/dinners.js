@@ -32,16 +32,6 @@ router.get('/userid/:id', function(req, res, next) {
   });
 });
 
-/*router.get('/all', function(req, res, next) {
-  dinners.getAllDinners(req.body, function(err, count) {
-    if (err) {
-      res.json(err);
-    } else {
-      res.json(req.body);
-    }
-  });
-});*/
-
 router.post('/', function(req, res, next) {
   dinners.addDinner(req.body, function(err, count) {
     if (err) {
@@ -90,6 +80,26 @@ router.put('/guests/:id', function(req, res, next) {
       res.json(rows);
     }
   });
+});
+
+router.put('/rating/:id', function(req, res, next) {
+    dinners.dinnerRating(req.params.id, req.body, function(err, rows) {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json(rows);
+        }
+    });
+});
+
+router.put('/decrement/:id', function(req, res, next) {
+    dinners.decrementGuest(req.params.id, req.body, function(err, rows) {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json(rows);
+        }
+    });
 });
 
 module.exports = router;
