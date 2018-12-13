@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var guests = require('../models/guests');
 
-
 router.get('/dinner/:id?', function(req, res, next) {
     guests.getGuestsByDinner(req.params.id, function(err, count) {
         if (err) {

@@ -3,7 +3,7 @@ var dinners = {
 
     getUpToDateDinners: function(callback) {
         return db.query(
-            'SELECT GROUP_CONCAT(guests.user_id separator ",") as dinner_users, user.username,dinner.id, dinner.user_id, dinner.name, dinner.description, dinner.diet,  dinner.time, dinner.date, dinner.address, dinner.no_plates, dinner.no_guests FROM dinner INNER JOIN user ON dinner.user_id=user.id LEFT JOIN guests ON guests.dinner_id = dinner.id WHERE (date= current_date AND time>=current_time) OR date> current_date GROUP BY dinner.id',
+            'SELECT GROUP_CONCAT(guests.user_id separator ",") as dinner_users, user.username,dinner.id, dinner.user_id, dinner.name, dinner.description, dinner.diet,  dinner.time, dinner.date, dinner.address, dinner.no_plates, dinner.no_guests FROM dinner INNER JOIN user ON dinner.user_id=user.id LEFT JOIN guests ON guests.dinner_id = dinner.id WHERE (date= current_date AND time>=current_time) OR date> current_date GROUP BY dinner.id ORDER BY dinner.date DESC',
             callback
         );
     },
@@ -27,9 +27,16 @@ var dinners = {
     return db.query('SELECT * FROM dinner WHERE user_id=? ORDER BY dinner.date DESC', [id], callback);
   },
 
+
+  getNewestDinners:function(callback){
+        return db.query( 'SELECT user.username, dinner.id, dinner.date, dinner.time, dinner.name, dinner.diet FROM dinner INNER JOIN user ON dinner.user_id=user.id ORDER BY dinner.id DESC LIMIT 5',
+            callback
+        );
+  },
+
   addDinner: function(dinner, callback) {
     return db.query(
-      'INSERT INTO dinner VALUES(?,?,?,?,?,?,?,?,?,?)',
+      'INSERT INTO dinner VALUES(?,?,?,?,?,?,?,?,?,?,?)',
       [
         dinner.id,
         dinner.user_id,
@@ -40,7 +47,8 @@ var dinners = {
         dinner.date,
         dinner.address,
         dinner.description,
-        dinner.name
+        dinner.name,
+        (dinner.grade=0)
       ],
       callback
     );

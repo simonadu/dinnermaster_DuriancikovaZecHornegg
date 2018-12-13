@@ -80,5 +80,11 @@ var users = {
         );
     },
 
+    getMaster: function(callback){
+      return db.query(
+          'SELECT username, score FROM user WHERE score= (SELECT MAX(score) FROM user)', callback
+      )
+    }
+
 };
 module.exports = users;

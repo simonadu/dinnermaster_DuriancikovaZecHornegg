@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0676f812-2a6d-4b1a-b5b5-d79b55ac48f0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../DinnerMaster_client/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/../DinnerMaster_client/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DinnerMaster_client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../DinnerMaster_client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DinnerMaster_client/src/DinnerDesc.js" beforeDir="false" afterPath="$PROJECT_DIR$/../DinnerMaster_client/src/DinnerDesc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DinnerMaster_client/src/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../DinnerMaster_client/src/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DinnerMaster_client/src/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../DinnerMaster_client/src/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DinnerMaster_client/src/MyDinners.js" beforeDir="false" afterPath="$PROJECT_DIR$/../DinnerMaster_client/src/MyDinners.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DinnerMaster_client/src/Rate.js" beforeDir="false" afterPath="$PROJECT_DIR$/../DinnerMaster_client/src/Rate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DinnerMaster_client/src/Ranking.js" beforeDir="false" afterPath="$PROJECT_DIR$/../DinnerMaster_client/src/Ranking.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DinnerMaster_client/src/ShowDinners.js" beforeDir="false" afterPath="$PROJECT_DIR$/../DinnerMaster_client/src/ShowDinners.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DinnerMaster_client/src/ShowUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/../DinnerMaster_client/src/ShowUsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DinnerMaster_client/src/VisitedDinners.js" beforeDir="false" afterPath="$PROJECT_DIR$/../DinnerMaster_client/src/VisitedDinners.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DinnerMaster_client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../DinnerMaster_client/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DinnerMaster_client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../DinnerMaster_client/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/dinners.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/dinners.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/guests.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/guests.js" afterDir="false" />
@@ -26,49 +30,49 @@
     <session id="1623811405">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="23" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.15" value="2" />
-          <entry key="project.open.time.16" value="3" />
+          <entry key="project.open.time.16" value="4" />
           <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.19" value="2" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.24" value="2" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.39" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="3" />
-          <entry key="js" value="152" />
-          <entry key="ts" value="1" />
+          <entry key="css" value="6" />
+          <entry key="js" value="190" />
+          <entry key="ts" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="3" />
-          <entry key="JavaScript" value="152" />
-          <entry key="TypeScript" value="1" />
+          <entry key="CSS" value="6" />
+          <entry key="JavaScript" value="190" />
+          <entry key="TypeScript" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="160" />
-          <entry key="js" value="20234" />
+          <entry key="css" value="522" />
+          <entry key="js" value="22764" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="160" />
-          <entry key="JavaScript" value="20224" />
+          <entry key="CSS" value="522" />
+          <entry key="JavaScript" value="22754" />
           <entry key="SQL" value="10" />
         </counts>
       </usages-collector>
@@ -77,10 +81,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/ShowDinners.js">
+        <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/Header.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="116" column="48" selection-start-line="116" selection-start-column="29" selection-end-line="116" selection-end-column="48" />
+            <state relative-caret-position="-387">
+              <caret line="38" column="15" lean-forward="true" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -103,23 +107,27 @@
         <option value="$PROJECT_DIR$/models/dinner_user.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/database.js" />
-        <option value="$PROJECT_DIR$/../DinnerMaster_client/src/App.js" />
-        <option value="$PROJECT_DIR$/../DinnerMaster_client/src/Header.js" />
         <option value="$PROJECT_DIR$/../DinnerMaster_client/src/DinnerGuests.js" />
         <option value="$PROJECT_DIR$/../DinnerMaster_client/src/Apply.js" />
-        <option value="$PROJECT_DIR$/../DinnerMaster_client/src/VisitedDinners.js" />
         <option value="$PROJECT_DIR$/../DinnerMaster_client/src/ShowUsers.js" />
-        <option value="$PROJECT_DIR$/../DinnerMaster_client/src/Rate.js" />
-        <option value="$PROJECT_DIR$/../DinnerMaster_client/src/index.css" />
-        <option value="$PROJECT_DIR$/../DinnerMaster_client/src/index.js" />
-        <option value="$PROJECT_DIR$/models/users.js" />
         <option value="$PROJECT_DIR$/../DinnerMaster_client/src/DeleteGuest.js" />
+        <option value="$PROJECT_DIR$/../DinnerMaster_client/src/index.js" />
+        <option value="$PROJECT_DIR$/../DinnerMaster_client/src/Rate.js" />
+        <option value="$PROJECT_DIR$/../DinnerMaster_client/src/AddDinner.js" />
         <option value="$PROJECT_DIR$/../DinnerMaster_client/src/ShowDinners.js" />
-        <option value="$PROJECT_DIR$/routes/dinners.js" />
-        <option value="$PROJECT_DIR$/routes/guests.js" />
-        <option value="$PROJECT_DIR$/models/guests.js" />
-        <option value="$PROJECT_DIR$/routes/users.js" />
         <option value="$PROJECT_DIR$/../DinnerMaster_client/src/MyDinners.js" />
+        <option value="$PROJECT_DIR$/../DinnerMaster_client/src/VisitedDinners.js" />
+        <option value="$PROJECT_DIR$/../DinnerMaster_client/src/Header.js" />
+        <option value="$PROJECT_DIR$/models/guests.js" />
+        <option value="$PROJECT_DIR$/routes/guests.js" />
+        <option value="$PROJECT_DIR$/routes/users.js" />
+        <option value="$PROJECT_DIR$/models/users.js" />
+        <option value="$PROJECT_DIR$/../DinnerMaster_client/src/Ranking.js" />
+        <option value="$PROJECT_DIR$/routes/dinners.js" />
+        <option value="$PROJECT_DIR$/../DinnerMaster_client/src/DinnerDesc.js" />
+        <option value="$PROJECT_DIR$/../DinnerMaster_client/src/Footer.js" />
+        <option value="$PROJECT_DIR$/../DinnerMaster_client/src/index.css" />
+        <option value="$PROJECT_DIR$/../DinnerMaster_client/src/App.js" />
         <option value="$PROJECT_DIR$/models/dinners.js" />
       </list>
     </option>
@@ -237,18 +245,19 @@
       <workItem from="1544425503315" duration="14660000" />
       <workItem from="1544523180158" duration="1524000" />
       <workItem from="1544557526071" duration="8680000" />
-      <workItem from="1544598704463" duration="8629000" />
+      <workItem from="1544598704463" duration="19351000" />
+      <workItem from="1544631738280" duration="9357000" />
+      <workItem from="1544648144040" duration="191000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159909000" />
+    <option name="totallyTimeSpent" value="180179000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20647773" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21295546" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -270,7 +279,7 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18137652" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20647773" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -320,68 +329,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/react.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="990" column="8" selection-start-line="990" selection-start-column="8" selection-end-line="990" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-47">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/Footer.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="65" column="19" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/ShowUsers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/DinnerGuests.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="58" column="58" selection-start-line="58" selection-start-column="58" selection-end-line="58" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/Rate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/VisitedDinners.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="102" column="37" selection-start-line="102" selection-start-column="37" selection-end-line="102" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/Apply.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="44" column="34" lean-forward="true" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -394,93 +345,157 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/DeleteGuest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="62" column="22" lean-forward="true" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/dinners.js">
+    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/Rate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="94" column="18" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
+        <state relative-caret-position="157">
+          <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/guests.js">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/react.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="903" column="8" selection-start-line="903" selection-start-column="8" selection-end-line="903" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/Apply.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/guests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" column="3" selection-start-line="70" selection-start-column="3" selection-end-line="70" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/dinners.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/MyDinners.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <caret line="67" column="3" lean-forward="true" selection-start-line="67" selection-start-column="3" selection-end-line="67" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="34" column="29" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="29" />
+        <state relative-caret-position="340">
+          <caret line="47" column="35" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="35" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/DinnerDesc.js">
+    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/ShowUsers.js" />
+    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/AddDinner.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <caret line="174" column="20" selection-start-line="174" selection-start-column="20" selection-end-line="174" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/VisitedDinners.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="77" column="31" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/guests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/guests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="12" lean-forward="true" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="84" column="86" selection-start-line="84" selection-start-column="86" selection-end-line="84" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/dinners.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/Ranking.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="48" column="38" selection-start-line="48" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2057">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/Footer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="60" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/DinnerDesc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="78" column="22" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/MyDinners.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/dinners.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="31" column="195" selection-start-line="31" selection-start-column="195" selection-end-line="31" selection-end-column="195" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/ShowDinners.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="116" column="48" selection-start-line="116" selection-start-column="29" selection-end-line="116" selection-end-column="48" />
+        <state relative-caret-position="412">
+          <caret line="93" column="18" selection-start-line="84" selection-start-column="14" selection-end-line="93" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../DinnerMaster_client/src/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-387">
+          <caret line="38" column="15" lean-forward="true" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
         </state>
       </provider>
     </entry>

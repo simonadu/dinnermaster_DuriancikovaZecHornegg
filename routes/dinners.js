@@ -32,6 +32,17 @@ router.get('/userid/:id', function(req, res, next) {
   });
 });
 
+router.get('/three/newest/', function(req, res, next) {
+    dinners.getNewestDinners(function(err, rows) {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json(rows);
+        }
+    });
+});
+
+
 router.post('/', function(req, res, next) {
   dinners.addDinner(req.body, function(err, count) {
     if (err) {
