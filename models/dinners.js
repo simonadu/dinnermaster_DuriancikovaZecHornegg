@@ -27,6 +27,13 @@ var dinners = {
     return db.query('SELECT * FROM dinner WHERE user_id=? ORDER BY dinner.date DESC', [id], callback);
   },
 
+
+  getNewestDinners:function(callback){
+        return db.query( 'SELECT user.username, dinner.id, dinner.date, dinner.time, dinner.name, dinner.diet FROM dinner INNER JOIN user ON dinner.user_id=user.id ORDER BY dinner.id DESC LIMIT 5',
+            callback
+        );
+  },
+
   addDinner: function(dinner, callback) {
     return db.query(
       'INSERT INTO dinner VALUES(?,?,?,?,?,?,?,?,?,?,?)',

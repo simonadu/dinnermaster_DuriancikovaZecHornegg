@@ -19,6 +19,12 @@ var guests = {
         );
     },
 
+    getMaster: function(callback){
+        return db.query(
+            'SELECT user.username, user.score FROM user WHERE score=MAX(score)', callback
+        )
+    },
+
     getGuestbyGuestId: function(id, callback) {
         return db.query
         ('SELECT guests.id, guests.user_id, guests.dinner_id, guests.grade, dinner.name, dinner.description, dinner.date, dinner.time, user.username  FROM guests INNER JOIN dinner ON guests.dinner_id=dinner.id INNER JOIN user ON guests.user_id=user.id WHERE guests.id=?', [id], callback)

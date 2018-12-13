@@ -35,6 +35,16 @@ router.get('/show/:username?', function(req,res,next) {
     });
 });
 
+router.get('/master/top', function(req,res,next) {
+    users.getMaster(function(err,count) {
+        if (err) {
+            res.json(err);
+        } else {
+            res.json(count);
+        }
+    });
+});
+
 router.post('/', function(req, res, next) {
 
     const password = req.body.password;
